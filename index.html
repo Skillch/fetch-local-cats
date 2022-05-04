@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const storage = window.localStorage;
+    </script>
+</head>
+<body>
+    <!-- header+main+footer -->
+    <header>
+        <a href="/index.html" class="logo"></a>
+        <div id=user></div>
+        <nav>
+            <a href="/index.html">Главная страница</a>
+            <a href="/add.html">Добавить кота</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Коты - Собаки</h1>
+        <div class="container">
+            
+        </div>
+    </main>
+    <footer>&copy;2022</footer>
+    <script src="script.js"></script>
+    <script>
+        let name = storage.getItem("user");
+        if (!name) {
+            name = prompt("Как тебя зовут?") || "Гость";
+            storage.setItem("user", name);
+        } else {
+          
+        }
+        document.getElementById("user").innerText = `Hello ${name}!`;
+    </script>
+</body>
+</html>
+

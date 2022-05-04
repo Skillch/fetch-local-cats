@@ -1,0 +1,147 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 70px 1fr 50px;
+}
+header {
+    color: #fff;
+    background-color: rgb(214, 145, 16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+} 
+footer {
+    background-color: #777;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+nav {
+    display: flex;
+    gap: 30px;
+}
+.logo {
+    height: 40px;
+    width: 40px;
+    background-image: url(img/cat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main {
+    padding: 30px;
+}
+h1 {
+    margin: 0 0 30px;
+    text-align: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 1000px;
+    margin: auto;
+}
+.cat {
+    height: 200px;
+    background-color: rgb(214, 145, 16);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    gap: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.cat:hover {
+    background-color: #999;
+}
+.cat .img {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    background-image: url(img/cat.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 20px;
+    margin: auto;
+}
+
+.person {
+    display: grid;
+    width: 1000px;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.person h1 {
+    grid-column: 1 / 3;
+    margin: 0;
+}
+
+th {
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    font-weight: 400;
+    color: #777;
+}
+td {
+    font-size: 20px;
+}
+.person_pic {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+.popup {
+    position: fixed;
+    width: 300px;
+    padding: 20px;
+    border: 1px dashed #222;
+    border-radius: 12px;
+    left: calc(50% - 96px); 
+    top: 40%;
+    background-color: #777;
+    color: white;
+    display: none;
+}
+.active {
+    display: block;
+}
+.popup-close {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px dotted #222;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
